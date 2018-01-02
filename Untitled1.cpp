@@ -15,7 +15,6 @@ int main() {
 			cout<<ac[i][j]<<" | ";
 		}cout<<endl;
 	}
-	
 		cout<<endl<<"MATRIKS R : "<<endl;
 	double mc[5];
 	for(int i=0;i<5;i++) {
@@ -44,3 +43,28 @@ int main() {
 			cout<<Rac[i][j]<<" | ";
 		}cout<<endl;
 	}
+	
+	cout<<endl<<"BOBOT W : "<<endl;
+	double w[5]={5,3,4,4,2};
+	for(int i=0;i<5;i++){
+	cout<<w[i]<<" | ";
+	}cout<<endl;
+	
+	cout<<endl<<"MATRIK R * W : "<<endl;
+	double RWac[3][5];
+	for(int i=0;i<3;i++){
+	for(int j=0;j<3;j++){
+	RWac[i][j]=Rac[i][j]*w[j]; cout<<RWac[i][j]<<" | ";
+		}cout<<endl;
+	}
+	
+	
+	cout<<endl<<"HASIL AKHIR : "<<endl;
+	double ha[3];
+	for(int i=0;i<3;i++){
+	for(int j=0;j<3;j++){
+	ha[i]+=RWac[i][j];
+		}
+	}
+	cout<<"Nilai A1 : "<<ha[0]<<endl<<"Nilai A2 : "<<ha[1]<<endl<<"Nilai A3 : "<<ha[2]<<endl;
+}
